@@ -5,4 +5,5 @@
 int _printf(const char *format, ...);
 int puts_character(char ch);
 int puts_string(const char *str);
+int puts_integer(int num);
 #endif

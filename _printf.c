@@ -4,6 +4,7 @@ int puts_character(char ch);
 int puts_string(const char *str);
 int handles_character(va_list args);
 int handles_string(va_list args);
+int handles_integer(va_list args);
 
 /**
  * _printf - produces output according
@@ -35,6 +36,12 @@ int _printf(const char *format, ...)
 				case 's':
 					{
 						num += handles_string(args);
+						break;
+					}
+				case 'd':
+				case 'i':
+					{
+						num +=handles_integer(args);
 						break;
 					}
 				case '%':
